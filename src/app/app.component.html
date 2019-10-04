@@ -1,11 +1,6 @@
-<div class="ui-g">
-    <form [formGroup]="myForm">
-        <label> r1:
-            <p-radioButton name="groupname" value="val1" formControlName="myRadio"></p-radioButton>
-        </label>
 
-        <label> r2:
-            <p-radioButton name="groupname" value="val2" formControlName="myRadio"></p-radioButton>
-        </label>
-    </form>
+<div class="ui-g">
+    Toast sample
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <button pButton type="button" label="Click" (click)="displayToast($event)"></button>
 </div>

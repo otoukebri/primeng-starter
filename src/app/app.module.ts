@@ -1,15 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { DialogModule } from 'primeng/dialog';
-
+import { ToastModule } from 'primeng/toast';
 import { AppComponent } from './app.component';
-import {RadioButtonModule} from 'primeng/radiobutton';
+
 
 @NgModule({
     declarations: [
@@ -20,12 +17,9 @@ import {RadioButtonModule} from 'primeng/radiobutton';
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        TableModule,
         HttpClientModule,
-        InputTextModule,
-        DialogModule,
         ButtonModule,
-        RadioButtonModule
+        ToastModule
     ],
     providers: [],
     bootstrap: [AppComponent]
