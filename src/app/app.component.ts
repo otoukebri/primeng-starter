@@ -12,8 +12,11 @@ export class AppComponent implements OnInit {
     constructor(private messageService: MessageService) {
 
     }
-    ngOnInit() {
-        this.messageService.add({severity: 'success', summary: 'Service Message', detail: 'Via MessageService'});
+    ngOnInit() {}
+
+    displayToast($event) {
+      console.log('displayToast');
+      this.messageService.add({severity: 'success', summary: 'Service Message', detail: 'Via MessageService'});
     }
 
 }
