@@ -9,14 +9,16 @@ import { MessageService } from 'primeng/components/common/messageservice';
 })
 export class AppComponent implements OnInit {
 
-    constructor(private messageService: MessageService) {
+    buttonClicked = false;
+    constructor() {}
 
-    }
     ngOnInit() {}
 
     displayToast($event) {
-      console.log('displayToast');
-      this.messageService.add({severity: 'success', summary: 'Service Message', detail: 'Via MessageService'});
+      if (!this.buttonClicked) {
+        console.log('displayToast');
+      }
+      this.buttonClicked = this.buttonClicked ? this.buttonClicked : !this.buttonClicked;
     }
 
 }
