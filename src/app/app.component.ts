@@ -14,9 +14,15 @@ export class AppComponent implements OnInit {
     }
     ngOnInit() {}
 
-    displayToast($event) {
+    displayToast(event) {
+      event.preventDefault();
+      event.stopPropagation();
       console.log('displayToast');
-      this.messageService.add({severity: 'success', summary: 'Service Message', detail: 'Via MessageService'});
+      this.messageService.add({severity: 'success', summary: 'Service Message1', detail: 'Via MessageService1'});
+      this.messageService.add({severity: 'error', summary: 'Service Message1', detail: 'Via MessageService2'});
+      this.messageService.add({severity: 'warning', summary: 'Service Message1', detail: 'Via MessageService3'});
+      this.messageService.add({severity: 'info', summary: 'Service Message1', detail: 'Via MessageService3'});
+
     }
 
 }
