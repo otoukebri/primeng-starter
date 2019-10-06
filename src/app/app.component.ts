@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/components/common/messageservice';
+import {InputTextModule} from 'primeng/inputtext';
+
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers : [MessageService]
+    providers : []
 })
 export class AppComponent implements OnInit {
 

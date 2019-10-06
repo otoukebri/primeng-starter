@@ -1,22 +1,12 @@
-
 <div class="ui-g-12">
-    <h1>Toast sample</h1>
+  <h1>Input sample</h1>
+  <span class="ui-float-label">
+    <input id="float-input" type="text" size="30" pInputText>
+    <label for="float-input">Username</label>
+  </span>
 
-      <p-toast [style]="{marginTop: '80px'}"></p-toast>
-
-      <div>
-        <button pButton type="button" label="Click" (click)="displayToast($event)" class="ui-button-rounded ui-button-info" ></button>
-      </div>
-
-      <div>
-        <button pButton type="button" label="Click" (click)="displayToast($event)" class="ui-button-rounded ui-button-warning" ></button>
-      </div>
-
-      <div>
-        <button pButton type="button" label="Click" (click)="displayToast($event)" class="ui-button-rounded ui-button-danger" ></button>
-      </div>
-
-      <div>
-        <button pButton type="button" label="Click" (click)="displayToast($event)" class="ui-button-rounded ui-button-success" ></button>
-      </div>
+  <div class="ui-inputgroup">
+    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+    <input type="text" pInputText placeholder="Username">
+  </div>
 </div>
