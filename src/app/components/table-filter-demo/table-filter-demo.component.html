@@ -1,4 +1,14 @@
-<p-table [value]="cars" [columns]="cols" [paginator]="true" [rows]="10">
+<p-table #dt [value]="cars" [columns]="cols" [paginator]="true" [rows]="10">
+
+  <ng-template pTemplate="caption">
+    <div>
+      <div style="text-align: right">
+        <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+        <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+      </div>
+    </div>
+  </ng-template>
+
   <ng-template pTemplate="header">
     <tr>
       <th *ngFor="let col of cols">{{col.header}}</th>
